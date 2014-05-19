@@ -1,0 +1,82 @@
+{namespace disk.templates }
+
+/** First side of phaistos disk 
+ * @param debug Debug mode
+ */
+{template .sideA}
+<div id="colorA"><img src="{if $debug}../deploy/{/if}img/a/color.png"/></div>
+<div id="bwA"><img src="{if $debug}../deploy/{/if}img/a/bw.png"/></div>
+{for $i in range(1,32)}
+   <div id="textA{$i}" class="text"><img src="{if $debug}../deploy/{/if}img/a/text/text{$i}.png"/></div>
+{/for}
+<div id="transparentA"><img id="diskmapimgA" src="{if $debug}../deploy/{/if}img/a/bw.png"/ usemap="#diskmapA"></div>
+<map id="diskmapA" name="diskmapA">
+  <area id="areaA1" shape="poly" alt="" title="" coords="715,970,767,1093,693,1123,599,1121,489,1105,415,1076,454,968,569,993,659,995" href="javascript:void(0)" />
+  <area id="areaA2" shape="poly" alt="" title="" coords="454,964,405,1084,313,1020,238,964,194,920,270,844,356,914,403,940" href="javascript:void(0)" />
+  <area id="areaA3" shape="poly" alt="" title="" coords="273,835,192,917,88,757,198,700,229,781,242,804" href="javascript:void(0)" />
+  <area id="areaA4" shape="poly" alt="" title="" coords="85,753,202,695,198,568,50,647,64,694" href="javascript:void(0)" />
+  <area id="areaA5" shape="poly" alt="" title="" coords="201,563,49,644,41,512,70,393,81,349,233,385,200,515" href="javascript:void(0)" />
+  <area id="areaA6" shape="poly" alt="" title="" coords="83,344,236,381,273,300,309,248,338,225,298,165,258,122,186,186,120,263" href="javascript:void(0)" />
+  <area id="areaA7" shape="poly" alt="" title="" coords="340,224,335,72,463,23,496,152,416,175" href="javascript:void(0)" />
+  <area id="areaA8" shape="poly" alt="" title="" coords="497,152,466,22,583,7,707,31,839,94,775,207,668,163,586,152,560,150" href="javascript:void(0)" />
+  <area id="areaA9" shape="poly" alt="" title="" coords="779,209,844,94,950,177,989,228,886,309,838,250" href="javascript:void(0)" />
+  <area id="areaA10" shape="poly" alt="" title="" coords="887,310,993,225,1070,373,1107,532,974,542,970,463,923,362" href="javascript:void(0)" />
+  <area id="areaA11" shape="poly" alt="" title="" coords="974,545,1105,533,1105,638,1086,753,1078,776,942,726,969,645" href="javascript:void(0)" />
+  <area id="areaA12" shape="poly" alt="" title="" coords="805,881,843,876,898,830,944,742,947,736,1079,781,1034,884,954,990,877,1058,838,1072" href="javascript:void(0)" />
+  <area id="areaA13" shape="poly" alt="" title="" coords="711,877,798,880,835,1074,785,1094,739,983" href="javascript:void(0)" />
+  <area id="areaA14" shape="poly" alt="" title="" coords="425,824,472,850,534,867,622,882,702,879,728,966,658,992,556,988,448,962,355,910" href="javascript:void(0)" />
+  <area id="areaA15" shape="poly" alt="" title="" coords="360,746,419,821,352,906,252,813" href="javascript:void(0)" />
+  <area id="areaA16" shape="poly" alt="" title="" coords="315,537,312,612,348,712,360,744,250,811,198,695,198,564,201,529" href="javascript:void(0)" />
+  <area id="areaA17" shape="poly" alt="" title="" coords="497,275,458,288,422,315,366,399,331,456,315,539,198,531,238,384,279,288,326,233,447,166,462,205" href="javascript:void(0)" />
+  <area id="areaA18" shape="poly" alt="" title="" coords="570,270,585,152,512,153,448,168,494,273" href="javascript:void(0)" />
+  <area id="areaA19" shape="poly" alt="" title="" coords="771,346,699,301,630,280,568,268,587,148,714,181,811,232,851,266" href="javascript:void(0)" />
+  <area id="areaA20" shape="poly" alt="" title="" coords="771,347,851,268,922,367,964,464,970,571,964,653,861,629,865,557,864,525,834,449,823,423" href="javascript:void(0)" />
+  <area id="areaA21" shape="poly" alt="" title="" coords="823,721,853,665,861,628,964,656,942,736,920,787,870,755" href="javascript:void(0)" />
+  <area id="areaA22" shape="poly" alt="" title="" coords="650,763,762,758,802,746,822,723,918,790,870,852,798,882,682,876,638,876" href="javascript:void(0)" />
+  <area id="areaA23" shape="poly" alt="" title="" coords="431,541,439,611,465,679,520,736,586,764,645,764,637,880,537,865,466,845,414,812,362,744,325,639,312,538,369,537" href="javascript:void(0)" />
+  <area id="areaA24" shape="poly" alt="" title="" coords="519,402,464,290,422,320,366,402,333,460,313,536,432,536,441,489,473,437" href="javascript:void(0)" />
+  <area id="areaA25" shape="poly" alt="" title="" coords="521,402,534,272,615,278,702,306,661,416,566,399" href="javascript:void(0)" />
+  <area id="areaA26" shape="poly" alt="" title="" coords="665,418,702,304,766,344,811,407,840,467,859,523,865,561,755,563,751,504,729,463,695,433" href="javascript:void(0)" />
+  <area id="areaA27" shape="poly" alt="" title="" coords="705,655,738,627,753,582,757,560,864,563,861,627,822,720,777,755,762,746,722,691" href="javascript:void(0)" />
+  <area id="areaA28" shape="poly" alt="" title="" coords="701,655,768,755,634,763,532,743,570,672,602,627,648,655,678,662" href="javascript:void(0)" />
+  <area id="areaA29" shape="poly" alt="" title="" coords="618,518,639,477,649,417,577,400,521,404,471,444,442,494,433,537,443,621,469,684,532,743,573,667,605,628,569,575,578,533,596,509" href="javascript:void(0)" />
+  <area id="areaA30" shape="poly" alt="" title="" coords="653,418,692,430,737,477,753,532,658,566,636,536,618,517,641,472" href="javascript:void(0)" />
+  <area id="areaA31" shape="poly" alt="" title="" coords="659,569,766,528,747,597,720,644,670,660,610,633,568,573,584,519,594,508,627,524,646,545" href="javascript:void(0)" />
+</map>
+{/template}
+
+/** Second side of phaistos disk 
+ * @param debug Debug mode
+ */
+{template .sideB}
+<div id="colorB"><img src="{if $debug}../deploy/{/if}img/b/color.png"/></div>
+<div id="bwB"><img src="{if $debug}../deploy/{/if}img/b/bw.png"/></div>
+{for $i in range(1,31)}
+   <div id="textB{$i}" class="text"><img src="{if $debug}../deploy/{/if}img/b/text/text{$i}.png"/></div>
+{/for}
+<div id="transparentB"><img id="diskmapimgB" src="{if $debug}../deploy/{/if}img/b/bw.png"/ usemap="#diskmapB"></div>
+<map id="diskmapB" name="diskmapB">
+
+</map>
+{/template}
+
+/** soyweb test */
+{template .soyweb}
+  <html>
+  <head>
+    <title>Phaistos Disk - TEI of Crete - Interactive application</title>
+    <script src="http://localhost:9810/compile?id=debug-main"></script>
+    <link rel="stylesheet" type="text/css" href="../deploy/main.css">
+  </head>
+  <body>
+    <div id='title'>Phaistos Disk - interactive application</div>
+    <div id='side-a'>
+      {call .sideA}{param debug:true/}{/call}
+    </div>
+    <div id='side-b'>
+      {call .sideB}{param debug:true/}{/call}
+    </div>
+  </body>
+</html>
+
+{/template}
