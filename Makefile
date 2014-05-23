@@ -1,7 +1,7 @@
 all:
 	java -jar ../plovr.jar serve debug-main.json
 build:
-	java -jar ../plovr.jar build main.json > deploy/index.js
+	java -jar ../plovr.jar build main.json > www/index.js
 soyweb:
 	java -jar ../plovr.jar soyweb --dir .
 lint:

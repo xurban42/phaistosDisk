@@ -185,10 +185,10 @@ disk.ImageMap = function (map, width) {
 disk.playSound = function(filename) { 
   if (goog.DEBUG) {
     goog.dom.getElement("sound").innerHTML=
-      '<audio id="audioplay"><source src="../deploy/sound/' + 
-      filename + '.mp3" type="audio/mpeg" /><source src="../deploy/sound/' + 
+      '<audio id="audioplay"><source src="../www/sound/' + 
+      filename + '.mp3" type="audio/mpeg" /><source src="../www/sound/' + 
       filename + '.ogg" type="audio/ogg" />' +
-      ' <embed id="embedplay" hidden="true" autostart="true" loop="false" src="../deploy/sound/' +
+      ' <embed id="embedplay" hidden="true" autostart="true" loop="false" src="../www/sound/' +
        filename +'.mp3" /></audio>';
 
   } else {
