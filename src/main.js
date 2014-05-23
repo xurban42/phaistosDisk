@@ -85,15 +85,18 @@ disk.Main = function() {
       });
    
     window.onload = function() {
-      var map = new disk.ImageMap(goog.dom.getElement('diskmapA'));
-      map.resize();
+      var mapA = new disk.ImageMap('diskmapA', 1145);
+      mapA.resize();
+      var mapB = new disk.ImageMap('diskmapB', 800);
+      mapB.resize();
     }
 
-    var areas = goog.dom.getElementsByTagNameAndClass('area', undefined, 
+    var areasA = goog.dom.getElementsByTagNameAndClass('area', undefined, 
         goog.dom.getElement('diskmapA'));
-    var len = areas['length'];
-    for (var ai=1; ai<=len; ai++) {
+    var lenA = areasA['length'];
+    for (var ai=1; ai<=lenA; ai++) {
 
+      // SIDE A
       goog.events.listen(goog.dom.getElement('areaA'+ai), goog.events.EventType.MOUSEOVER, 
       function(e) {
         var num = e.target.id.slice(5);
@@ -108,28 +111,63 @@ disk.Main = function() {
 
       goog.events.listen(goog.dom.getElement('areaA'+ai), goog.events.EventType.CLICK, 
       function(e) {
+        animation.stopA();
+        animation.stopB();
+
         var num = e.target.id.slice(5);
         disk.playSound('sideA/'+num);
+      });
+    }
+
+    var areasB = goog.dom.getElementsByTagNameAndClass('area', undefined, 
+        goog.dom.getElement('diskmapB'));
+    var lenB = areasB['length'];
+    for (var bi=1; bi<=lenB; bi++) {
+      // SIDE B
+      goog.events.listen(goog.dom.getElement('areaB'+bi), goog.events.EventType.MOUSEOVER, 
+      function(e) {
+        var num = e.target.id.slice(5);
+        goog.dom.classes.add(goog.dom.getElement('textB'+num), 'texthover');
+      });
+
+      goog.events.listen(goog.dom.getElement('areaB'+bi), goog.events.EventType.MOUSEOUT, 
+      function(e) {
+        var num = e.target.id.slice(5);
+        goog.dom.classes.remove(goog.dom.getElement('textB'+num), 'texthover');
+      });
+
+      goog.events.listen(goog.dom.getElement('areaB'+bi), goog.events.EventType.CLICK, 
+      function(e) {
+        animation.stopA();
+        animation.stopB();
+
+        var num = e.target.id.slice(5);
+        disk.playSound('sideB/'+num);
       });
     }
 }
 
 /** 
  * @constructor
+ * @param {string} map Map element id.
+ * @param {number} width Original image width.
  */
-disk.ImageMap = function (map) {
+disk.ImageMap = function (map, width) {
+  var mapEl = goog.dom.getElement(map);
+  this.name = map;
   var n,
-      areas = map.getElementsByTagName('area'),
+      areas = mapEl.getElementsByTagName('area'),
       len = areas.length,
       coords = [],
-      previousWidth = 1145;
+      previousWidth = width, 
+      imgElement = goog.dom.getElement(map+'img');
 
   for (n = 0; n < len; n++) {
       coords[n] = areas[n].coords.split(',');
   }
   this.resize = function () {
       var n, m, clen,
-          x = goog.style.getSize(goog.dom.getElement('diskmapimgA')).width / previousWidth;
+          x = goog.style.getSize(imgElement).width / previousWidth;
 
       for (n = 0; n < len; n++) {
           clen = coords[n].length;
@@ -138,7 +176,7 @@ disk.ImageMap = function (map) {
           }
           areas[n].coords = coords[n].join(',');
       }
-      previousWidth = goog.style.getSize(goog.dom.getElement('diskmapimgA')).width;
+      previousWidth = goog.style.getSize(imgElement).width;
       return true;
   };
   window.onresize = this.resize;
@@ -147,20 +185,22 @@ disk.ImageMap = function (map) {
 disk.playSound = function(filename) { 
   if (goog.DEBUG) {
     goog.dom.getElement("sound").innerHTML=
-      '<audio id="audioplay" autoplay="autoplay"><source src="../deploy/sound/' + 
+      '<audio id="audioplay"><source src="../deploy/sound/' + 
       filename + '.mp3" type="audio/mpeg" /><source src="../deploy/sound/' + 
       filename + '.ogg" type="audio/ogg" />' +
       ' <embed id="embedplay" hidden="true" autostart="true" loop="false" src="../deploy/sound/' +
        filename +'.mp3" /></audio>';
+
   } else {
     goog.dom.getElement("sound").innerHTML=
-      '<audio id="audioplay" autoplay="autoplay"><source src="sound/' + 
+      '<audio id="audioplay"><source src="sound/' + 
       filename + '.mp3" type="audio/mpeg" /><source src="sound/' + 
       filename + '.ogg" type="audio/ogg" />' +
       ' <embed id="embedplay" hidden="true" autostart="true" loop="false" src="sound/' +
        filename +'.mp3" /></audio>';
-   }
-
+  }
+  var audio = document.getElementById('audioplay');
+  audio.play();
 };
 
 /**
