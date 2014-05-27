@@ -1,2 +1,361 @@
 index.js
 download.zip
+platforms/ios/.gitignore
+platforms/ios/cordova/apple_ios_version
+platforms/ios/cordova/apple_osx_version
+platforms/ios/cordova/apple_xcode_version
+platforms/ios/cordova/build
+platforms/ios/cordova/build.xcconfig
+platforms/ios/cordova/check_reqs
+platforms/ios/cordova/clean
+platforms/ios/cordova/console.log
+platforms/ios/cordova/defaults.xml
+platforms/ios/cordova/emulate
+platforms/ios/cordova/lib/copy-www-build-step.sh
+platforms/ios/cordova/lib/install-device
+platforms/ios/cordova/lib/install-emulator
+platforms/ios/cordova/lib/list-devices
+platforms/ios/cordova/lib/list-emulator-images
+platforms/ios/cordova/lib/list-started-emulators
+platforms/ios/cordova/lib/sim.applescript
+platforms/ios/cordova/lib/start-emulator
+platforms/ios/cordova/log
+platforms/ios/cordova/run
+platforms/ios/cordova/version
+platforms/ios/CordovaLib/Classes/CDV.h
+platforms/ios/CordovaLib/Classes/CDVAvailability.h
+platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
+platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h
+platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m
+platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
+platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
+platforms/ios/CordovaLib/Classes/CDVConfigParser.h
+platforms/ios/CordovaLib/Classes/CDVConfigParser.m
+platforms/ios/CordovaLib/Classes/CDVDebug.h
+platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
+platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
+platforms/ios/CordovaLib/Classes/CDVJSON.h
+platforms/ios/CordovaLib/Classes/CDVJSON.m
+platforms/ios/CordovaLib/Classes/CDVLocalStorage.h
+platforms/ios/CordovaLib/Classes/CDVLocalStorage.m
+platforms/ios/CordovaLib/Classes/CDVPlugin.h
+platforms/ios/CordovaLib/Classes/CDVPlugin.m
+platforms/ios/CordovaLib/Classes/CDVPluginResult.h
+platforms/ios/CordovaLib/Classes/CDVPluginResult.m
+platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
+platforms/ios/CordovaLib/Classes/CDVShared.h
+platforms/ios/CordovaLib/Classes/CDVShared.m
+platforms/ios/CordovaLib/Classes/CDVTimer.h
+platforms/ios/CordovaLib/Classes/CDVTimer.m
+platforms/ios/CordovaLib/Classes/CDVURLProtocol.h
+platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
+platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h
+platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m
+platforms/ios/CordovaLib/Classes/CDVViewController.h
+platforms/ios/CordovaLib/Classes/CDVViewController.m
+platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h
+platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
+platforms/ios/CordovaLib/Classes/CDVWhitelist.h
+platforms/ios/CordovaLib/Classes/CDVWhitelist.m
+platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h
+platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m
+platforms/ios/CordovaLib/Classes/NSData+Base64.h
+platforms/ios/CordovaLib/Classes/NSData+Base64.m
+platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h
+platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m
+platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
+platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
+platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h
+platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m
+platforms/ios/CordovaLib/cordova.js
+platforms/ios/CordovaLib/CordovaLib.xcodeproj/project.pbxproj
+platforms/ios/CordovaLib/CordovaLib_Prefix.pch
+platforms/ios/CordovaLib/VERSION
+platforms/ios/Phaistos Disk Voice.xcodeproj/project.pbxproj
+platforms/ios/Phaistos Disk Voice/.gitignore
+platforms/ios/Phaistos Disk Voice/Classes/AppDelegate.h
+platforms/ios/Phaistos Disk Voice/Classes/AppDelegate.m
+platforms/ios/Phaistos Disk Voice/Classes/MainViewController.h
+platforms/ios/Phaistos Disk Voice/Classes/MainViewController.m
+platforms/ios/Phaistos Disk Voice/Classes/MainViewController.xib
+platforms/ios/Phaistos Disk Voice/config.xml
+platforms/ios/Phaistos Disk Voice/main.m
+platforms/ios/Phaistos Disk Voice/Phaistos Disk Voice-Info.plist
+platforms/ios/Phaistos Disk Voice/Phaistos Disk Voice-Prefix.pch
+platforms/ios/Phaistos Disk Voice/Plugins/README
+platforms/ios/Phaistos Disk Voice/Resources/de.lproj/Localizable.strings
+platforms/ios/Phaistos Disk Voice/Resources/en.lproj/Localizable.strings
+platforms/ios/Phaistos Disk Voice/Resources/es.lproj/Localizable.strings
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-40.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-40@2x.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-50.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-50@2x.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-60.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-60@2x.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-72.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-72@2x.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-76.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-76@2x.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-small.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon-small@2x.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon.png
+platforms/ios/Phaistos Disk Voice/Resources/icons/icon@2x.png
+platforms/ios/Phaistos Disk Voice/Resources/se.lproj/Localizable.strings
+platforms/ios/Phaistos Disk Voice/Resources/splash/Default-568h@2x~iphone.png
+platforms/ios/Phaistos Disk Voice/Resources/splash/Default-Landscape@2x~ipad.png
+platforms/ios/Phaistos Disk Voice/Resources/splash/Default-Landscape~ipad.png
+platforms/ios/Phaistos Disk Voice/Resources/splash/Default-Portrait@2x~ipad.png
+platforms/ios/Phaistos Disk Voice/Resources/splash/Default-Portrait~ipad.png
+platforms/ios/Phaistos Disk Voice/Resources/splash/Default@2x~iphone.png
+platforms/ios/Phaistos Disk Voice/Resources/splash/Default~iphone.png
+platforms/ios/platform_www/cordova.js
+platforms/ios/www/config.xml
+platforms/ios/www/cordova.js
+platforms/ios/www/cordova_plugins.js
+platforms/ios/www/icon.png
+platforms/ios/www/img/a/bw.png
+platforms/ios/www/img/a/color.png
+platforms/ios/www/img/a/text/text1.png
+platforms/ios/www/img/a/text/text10.png
+platforms/ios/www/img/a/text/text11.png
+platforms/ios/www/img/a/text/text12.png
+platforms/ios/www/img/a/text/text13.png
+platforms/ios/www/img/a/text/text14.png
+platforms/ios/www/img/a/text/text15.png
+platforms/ios/www/img/a/text/text16.png
+platforms/ios/www/img/a/text/text17.png
+platforms/ios/www/img/a/text/text18.png
+platforms/ios/www/img/a/text/text19.png
+platforms/ios/www/img/a/text/text2.png
+platforms/ios/www/img/a/text/text20.png
+platforms/ios/www/img/a/text/text21.png
+platforms/ios/www/img/a/text/text22.png
+platforms/ios/www/img/a/text/text23.png
+platforms/ios/www/img/a/text/text24.png
+platforms/ios/www/img/a/text/text25.png
+platforms/ios/www/img/a/text/text26.png
+platforms/ios/www/img/a/text/text27.png
+platforms/ios/www/img/a/text/text28.png
+platforms/ios/www/img/a/text/text29.png
+platforms/ios/www/img/a/text/text3.png
+platforms/ios/www/img/a/text/text30.png
+platforms/ios/www/img/a/text/text31.png
+platforms/ios/www/img/a/text/text4.png
+platforms/ios/www/img/a/text/text5.png
+platforms/ios/www/img/a/text/text6.png
+platforms/ios/www/img/a/text/text7.png
+platforms/ios/www/img/a/text/text8.png
+platforms/ios/www/img/a/text/text9.png
+platforms/ios/www/img/b/bw.png
+platforms/ios/www/img/b/color.png
+platforms/ios/www/img/b/text/text1.png
+platforms/ios/www/img/b/text/text10.png
+platforms/ios/www/img/b/text/text11.png
+platforms/ios/www/img/b/text/text12.png
+platforms/ios/www/img/b/text/text13.png
+platforms/ios/www/img/b/text/text14.png
+platforms/ios/www/img/b/text/text15.png
+platforms/ios/www/img/b/text/text16.png
+platforms/ios/www/img/b/text/text17.png
+platforms/ios/www/img/b/text/text18.png
+platforms/ios/www/img/b/text/text19.png
+platforms/ios/www/img/b/text/text2.png
+platforms/ios/www/img/b/text/text20.png
+platforms/ios/www/img/b/text/text21.png
+platforms/ios/www/img/b/text/text22.png
+platforms/ios/www/img/b/text/text23.png
+platforms/ios/www/img/b/text/text24.png
+platforms/ios/www/img/b/text/text25.png
+platforms/ios/www/img/b/text/text26.png
+platforms/ios/www/img/b/text/text27.png
+platforms/ios/www/img/b/text/text28.png
+platforms/ios/www/img/b/text/text29.png
+platforms/ios/www/img/b/text/text3.png
+platforms/ios/www/img/b/text/text30.png
+platforms/ios/www/img/b/text/text4.png
+platforms/ios/www/img/b/text/text5.png
+platforms/ios/www/img/b/text/text6.png
+platforms/ios/www/img/b/text/text7.png
+platforms/ios/www/img/b/text/text8.png
+platforms/ios/www/img/b/text/text9.png
+platforms/ios/www/img/buttons/alltext.png
+platforms/ios/www/img/buttons/both-btn.png
+platforms/ios/www/img/buttons/bw-btn.png
+platforms/ios/www/img/buttons/color-btn.png
+platforms/ios/www/img/buttons/pause-btn.png
+platforms/ios/www/img/buttons/pause-btnA.png
+platforms/ios/www/img/buttons/pause-btnB.png
+platforms/ios/www/img/buttons/play-btn.png
+platforms/ios/www/img/buttons/play-btnA.png
+platforms/ios/www/img/buttons/play-btnB.png
+platforms/ios/www/img/buttons/text-btn.png
+platforms/ios/www/index.html
+platforms/ios/www/main.css
+platforms/ios/www/phonegap.js
+platforms/ios/www/res/icon/android/icon-36-ldpi.png
+platforms/ios/www/res/icon/android/icon-48-mdpi.png
+platforms/ios/www/res/icon/android/icon-72-hdpi.png
+platforms/ios/www/res/icon/android/icon-96-xhdpi.png
+platforms/ios/www/res/icon/bada-wac/icon-48-type5.png
+platforms/ios/www/res/icon/bada-wac/icon-50-type3.png
+platforms/ios/www/res/icon/bada-wac/icon-80-type4.png
+platforms/ios/www/res/icon/bada/icon-128.png
+platforms/ios/www/res/icon/blackberry/icon-80.png
+platforms/ios/www/res/icon/ios/icon-57-2x.png
+platforms/ios/www/res/icon/ios/icon-57.png
+platforms/ios/www/res/icon/ios/icon-72-2x.png
+platforms/ios/www/res/icon/ios/icon-72.png
+platforms/ios/www/res/icon/tizen/icon-128.png
+platforms/ios/www/res/icon/webos/icon-64.png
+platforms/ios/www/res/icon/windows-phone/icon-173-tile.png
+platforms/ios/www/res/icon/windows-phone/icon-48.png
+platforms/ios/www/res/icon/windows-phone/icon-62-tile.png
+platforms/ios/www/res/screen/android/screen-hdpi-landscape.png
+platforms/ios/www/res/screen/android/screen-hdpi-portrait.png
+platforms/ios/www/res/screen/android/screen-ldpi-landscape.png
+platforms/ios/www/res/screen/android/screen-ldpi-portrait.png
+platforms/ios/www/res/screen/android/screen-mdpi-landscape.png
+platforms/ios/www/res/screen/android/screen-mdpi-portrait.png
+platforms/ios/www/res/screen/android/screen-xhdpi-landscape.png
+platforms/ios/www/res/screen/android/screen-xhdpi-portrait.png
+platforms/ios/www/res/screen/bada-wac/screen-type3.png
+platforms/ios/www/res/screen/bada-wac/screen-type4.png
+platforms/ios/www/res/screen/bada-wac/screen-type5.png
+platforms/ios/www/res/screen/bada/screen-portrait.png
+platforms/ios/www/res/screen/blackberry/screen-225.png
+platforms/ios/www/res/screen/ios/screen-ipad-landscape-2x.png
+platforms/ios/www/res/screen/ios/screen-ipad-landscape.png
+platforms/ios/www/res/screen/ios/screen-ipad-portrait-2x.png
+platforms/ios/www/res/screen/ios/screen-ipad-portrait.png
+platforms/ios/www/res/screen/ios/screen-iphone-landscape-2x.png
+platforms/ios/www/res/screen/ios/screen-iphone-landscape.png
+platforms/ios/www/res/screen/ios/screen-iphone-portrait-2x.png
+platforms/ios/www/res/screen/ios/screen-iphone-portrait-568h-2x.png
+platforms/ios/www/res/screen/ios/screen-iphone-portrait.png
+platforms/ios/www/res/screen/tizen/README.md
+platforms/ios/www/res/screen/webos/screen-64.png
+platforms/ios/www/res/screen/windows-phone/screen-portrait.jpg
+platforms/ios/www/sound/no.mp3
+platforms/ios/www/sound/no.ogg
+platforms/ios/www/sound/sideA/1.mp3
+platforms/ios/www/sound/sideA/1.ogg
+platforms/ios/www/sound/sideA/10.mp3
+platforms/ios/www/sound/sideA/10.ogg
+platforms/ios/www/sound/sideA/11.mp3
+platforms/ios/www/sound/sideA/11.ogg
+platforms/ios/www/sound/sideA/12.mp3
+platforms/ios/www/sound/sideA/12.ogg
+platforms/ios/www/sound/sideA/13.mp3
+platforms/ios/www/sound/sideA/13.ogg
+platforms/ios/www/sound/sideA/14.mp3
+platforms/ios/www/sound/sideA/14.ogg
+platforms/ios/www/sound/sideA/15.mp3
+platforms/ios/www/sound/sideA/15.ogg
+platforms/ios/www/sound/sideA/16.mp3
+platforms/ios/www/sound/sideA/16.ogg
+platforms/ios/www/sound/sideA/17.mp3
+platforms/ios/www/sound/sideA/17.ogg
+platforms/ios/www/sound/sideA/18.mp3
+platforms/ios/www/sound/sideA/18.ogg
+platforms/ios/www/sound/sideA/19.mp3
+platforms/ios/www/sound/sideA/19.ogg
+platforms/ios/www/sound/sideA/2.mp3
+platforms/ios/www/sound/sideA/2.ogg
+platforms/ios/www/sound/sideA/20.mp3
+platforms/ios/www/sound/sideA/20.ogg
+platforms/ios/www/sound/sideA/21.mp3
+platforms/ios/www/sound/sideA/21.ogg
+platforms/ios/www/sound/sideA/22.mp3
+platforms/ios/www/sound/sideA/22.ogg
+platforms/ios/www/sound/sideA/23.mp3
+platforms/ios/www/sound/sideA/23.ogg
+platforms/ios/www/sound/sideA/24.mp3
+platforms/ios/www/sound/sideA/24.ogg
+platforms/ios/www/sound/sideA/25.mp3
+platforms/ios/www/sound/sideA/25.ogg
+platforms/ios/www/sound/sideA/26.mp3
+platforms/ios/www/sound/sideA/26.ogg
+platforms/ios/www/sound/sideA/27.mp3
+platforms/ios/www/sound/sideA/27.ogg
+platforms/ios/www/sound/sideA/28.mp3
+platforms/ios/www/sound/sideA/28.ogg
+platforms/ios/www/sound/sideA/29.mp3
+platforms/ios/www/sound/sideA/29.ogg
+platforms/ios/www/sound/sideA/3.mp3
+platforms/ios/www/sound/sideA/3.ogg
+platforms/ios/www/sound/sideA/30.mp3
+platforms/ios/www/sound/sideA/30.ogg
+platforms/ios/www/sound/sideA/31.mp3
+platforms/ios/www/sound/sideA/31.ogg
+platforms/ios/www/sound/sideA/4.mp3
+platforms/ios/www/sound/sideA/4.ogg
+platforms/ios/www/sound/sideA/5.mp3
+platforms/ios/www/sound/sideA/5.ogg
+platforms/ios/www/sound/sideA/6.mp3
+platforms/ios/www/sound/sideA/6.ogg
+platforms/ios/www/sound/sideA/7.mp3
+platforms/ios/www/sound/sideA/7.ogg
+platforms/ios/www/sound/sideA/8.mp3
+platforms/ios/www/sound/sideA/8.ogg
+platforms/ios/www/sound/sideA/9.mp3
+platforms/ios/www/sound/sideA/9.ogg
+platforms/ios/www/sound/sideB/1.mp3
+platforms/ios/www/sound/sideB/1.ogg
+platforms/ios/www/sound/sideB/10.mp3
+platforms/ios/www/sound/sideB/10.ogg
+platforms/ios/www/sound/sideB/11.mp3
+platforms/ios/www/sound/sideB/11.ogg
+platforms/ios/www/sound/sideB/12.mp3
+platforms/ios/www/sound/sideB/12.ogg
+platforms/ios/www/sound/sideB/13.mp3
+platforms/ios/www/sound/sideB/13.ogg
+platforms/ios/www/sound/sideB/14.mp3
+platforms/ios/www/sound/sideB/14.ogg
+platforms/ios/www/sound/sideB/15.mp3
+platforms/ios/www/sound/sideB/15.ogg
+platforms/ios/www/sound/sideB/16.mp3
+platforms/ios/www/sound/sideB/16.ogg
+platforms/ios/www/sound/sideB/17.mp3
+platforms/ios/www/sound/sideB/17.ogg
+platforms/ios/www/sound/sideB/18.mp3
+platforms/ios/www/sound/sideB/18.ogg
+platforms/ios/www/sound/sideB/19.mp3
+platforms/ios/www/sound/sideB/19.ogg
+platforms/ios/www/sound/sideB/2.mp3
+platforms/ios/www/sound/sideB/2.ogg
+platforms/ios/www/sound/sideB/20.mp3
+platforms/ios/www/sound/sideB/20.ogg
+platforms/ios/www/sound/sideB/21.mp3
+platforms/ios/www/sound/sideB/21.ogg
+platforms/ios/www/sound/sideB/22.mp3
+platforms/ios/www/sound/sideB/22.ogg
+platforms/ios/www/sound/sideB/23.mp3
+platforms/ios/www/sound/sideB/23.ogg
+platforms/ios/www/sound/sideB/24.mp3
+platforms/ios/www/sound/sideB/24.ogg
+platforms/ios/www/sound/sideB/25.mp3
+platforms/ios/www/sound/sideB/25.ogg
+platforms/ios/www/sound/sideB/26.mp3
+platforms/ios/www/sound/sideB/26.ogg
+platforms/ios/www/sound/sideB/27.mp3
+platforms/ios/www/sound/sideB/27.ogg
+platforms/ios/www/sound/sideB/28.mp3
+platforms/ios/www/sound/sideB/28.ogg
+platforms/ios/www/sound/sideB/29.mp3
+platforms/ios/www/sound/sideB/29.ogg
+platforms/ios/www/sound/sideB/3.mp3
+platforms/ios/www/sound/sideB/3.ogg
+platforms/ios/www/sound/sideB/30.mp3
+platforms/ios/www/sound/sideB/30.ogg
+platforms/ios/www/sound/sideB/4.mp3
+platforms/ios/www/sound/sideB/4.ogg
+platforms/ios/www/sound/sideB/5.mp3
+platforms/ios/www/sound/sideB/5.ogg
+platforms/ios/www/sound/sideB/6.mp3
+platforms/ios/www/sound/sideB/6.ogg
+platforms/ios/www/sound/sideB/7.mp3
+platforms/ios/www/sound/sideB/7.ogg
+platforms/ios/www/sound/sideB/8.mp3
+platforms/ios/www/sound/sideB/8.ogg
+platforms/ios/www/sound/sideB/9.mp3
+platforms/ios/www/sound/sideB/9.ogg
