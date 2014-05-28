@@ -1,4 +1,6 @@
 body {
+  margin:0;
+  padding: 0;
   background: black;
 }
 
@@ -8,6 +10,7 @@ body {
   text-align: center;
   font-family: serif;
   opacity: 0.6;
+  margin: 0;
 }
 
 #controls {
