@@ -1,11 +1,24 @@
-<html>
-  <head>
+<!DOCTYPE html 
+      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xml:lang="en-US"
+      lang="en-US">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png" />
+    <title>Phaistos Disk - TEI of Crete - Interactive application</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
     <title>Phaistos Disk - TEI of Crete - Interactive application</title>
     <script src="http://localhost:9810/compile?id=debug-main"></script>
     <link rel="stylesheet" type="text/css" href="../www/main.css">
   </head>
   <body>
-    <div id='title'>PHAISTOS DISK</div>
+    <div id='title'><img src="../www/img/title.png" height="15px"/></div>
     <div id='controls'>
       <div id='color-button' class='btn'></div>
       <div id='both-button' class='btn active'></div>
@@ -19,7 +32,27 @@
       <div id='side-a'></div>
       <div id='side-b'></div>
     </div>
-    <div id='sound'></div>
+    <div id="credits">
+      <div id="credits-link"></div>
+      <div id="credits-text">
+      <dl>
+        <dt>Web app designed & created by:</dt> <dd><a href="mailto:matto.softlabs@gmail.com"><b>Martin Urban</b></a></dd><br/>
+        <br/>
+        <dt>Epigraphic Reading:</dt> <dd><b><a href="mailto:ogareth@staff.teicrete.gr">Gareth Owens</a> & John Coleman</b></dd><br/>
+        <dt>Voice of the Disk:</dt> <dd><a href="mailto:aretialexopoulou@yahoo.gr"><b>Areti Alexopoulou</b></a></dd><br/>
+        <dt>Sound Editor:</dt> <dd><a href="mailto:xarhspolichronakis@hotmail.com"><b>Harry Polychronakis</b></a></dd><br/>
+        <dt>Studio:</dt> <dd><a href="https://www.teicrete.gr/mta/en/"><b>TEI of Crete - MTA</b></a></dd><br/>
+      </dl>
+      </div>
+      <div id="daidalika-link"><a href="https://www.teicrete.gr/daidalika/">&nbsp;</a></div>
+    </div>
+    <div id='sound'>
+      <audio id="audioplay">
+        <source id="mp3Source" src="" type="audio/mpeg" />
+        <source id="oggSource" src="" type="audio/ogg" />
+        <embed id="embSource" hidden="true" autostart="true" loop="false" src="" />
+      </audio>
+    </div>
     <script>new Main()</script>
   </body>
 </html>

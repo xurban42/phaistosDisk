@@ -2,7 +2,10 @@ body {
   margin:0;
   padding: 0;
   background: black;
+  overflow: hidden;
+  min-width:550px;
 }
+
 
 #title {
   color: white;
@@ -11,6 +14,7 @@ body {
   font-family: serif;
   opacity: 0.6;
   margin: 0;
+  margin-top: 5px;
 }
 
 #controls {
@@ -166,4 +170,97 @@ body {
   opacity:0;
 }
 
+#credits {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 140px;
+  top:30px;
+  right:-260px;
+  opacity:0.4;
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(170, 170, 170);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+#credits:hover {
+  opacity:1;
+  cursor:pointer;
+}
+
+#credits.active {
+  opacity:1;
+  right:0;
+
+}
+
+#credits-text {
+  font-size: 10px;
+  position: absolute;
+  display: block;
+  left:40px;
+  bottom: 40px;
+  right: 5px;
+  top: 5px;
+}
+
+
+#credits-text dt {
+  display: inline-block;
+}
+
+#credits-text dd {
+  display: inline-block;
+  margin:0;
+  float: right;
+}
+
+#credits-text a {
+  color:black;
+  text-decoration: none;
+}
+
+#credits-text a:hover {
+  color:black;
+  text-decoration: underline;
+}
+
+
+#credits-link {
+  position: absolute;
+  bottom:48px;
+  left:0;
+  height:80px;
+  width:40px;
+  background-image: url("img/buttons/credits-btn.png");
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#daidalika-link {
+  position: absolute;
+  bottom:0;
+  left:0;
+  height:35px;
+  width:290px;
+  margin:4px;
+  background-image: url("img/buttons/daidalika-btn.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#daidalika-link > a {
+  height: 100%;
+  width: 250px;
+  float: right;
+  opacity:0;
+}
 

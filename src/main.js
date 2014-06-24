@@ -4,6 +4,7 @@ goog.require('goog.dom');
 goog.require('goog.Timer');
 goog.require('goog.style');
 goog.require('goog.events');
+goog.require('goog.async.AnimationDelay');
 goog.require('disk.templates');
 
 /** 
@@ -27,8 +28,14 @@ disk.Main = function() {
   var textBtn = goog.dom.getElement('text-button');
   var playBtnA = goog.dom.getElement('play-buttonA');
   var playBtnB = goog.dom.getElement('play-buttonB');
+  var creditsBtn = goog.dom.getElement('credits');
 
   var animation = new disk.Animation();
+
+  goog.events.listen(creditsBtn, goog.events.EventType.CLICK,
+      function() {
+        goog.dom.classes.toggle(creditsBtn, 'active');
+      });
 
   goog.events.listen(colorBtn, goog.events.EventType.CLICK,
       function() {
@@ -183,25 +190,54 @@ disk.ImageMap = function (map, width) {
 };
 
 disk.playSound = function(filename) { 
+  var mp3 = goog.dom.getElement('mp3Source');
+  var ogg = goog.dom.getElement('oggSource');
+  var emb = goog.dom.getElement('embSource');
+  var audio = document.getElementById('audioplay');
   if (goog.DEBUG) {
-    goog.dom.getElement("sound").innerHTML=
+    /*goog.dom.getElement("sound").innerHTML=
       '<audio id="audioplay"><source src="../www/sound/' + 
       filename + '.mp3" type="audio/mpeg" /><source src="../www/sound/' + 
       filename + '.ogg" type="audio/ogg" />' +
       ' <embed id="embedplay" hidden="true" autostart="true" loop="false" src="../www/sound/' +
-       filename +'.mp3" /></audio>';
-
+       filename +'.mp3" /></audio>';*/
+    mp3.src = '../www/sound/' + filename + '.mp3';
+    ogg.src = '../www/sound/' + filename + '.ogg';
+    emb.src = '../www/sound/' + filename + '.mp3';
   } else {
-    goog.dom.getElement("sound").innerHTML=
+    /*goog.dom.getElement("sound").innerHTML=
       '<audio id="audioplay"><source src="sound/' + 
       filename + '.mp3" type="audio/mpeg" /><source src="sound/' + 
       filename + '.ogg" type="audio/ogg" />' +
       ' <embed id="embedplay" hidden="true" autostart="true" loop="false" src="sound/' +
-       filename +'.mp3" /></audio>';
+       filename +'.mp3" /></audio>';*/
+    mp3.src = 'sound/' + filename + '.mp3';
+    ogg.src = 'sound/' + filename + '.ogg';
+    emb.src = 'sound/' + filename + '.mp3';
   }
-  var audio = document.getElementById('audioplay');
-  audio.play();
+  audio.load();
+
+  var playListener = function() {
+    if (goog.isDefAndNotNull(audio)) {
+      audio.load();
+      audio.play();
+    } else {
+      timer.start();
+    }
+  }
+
+  var timer = new goog.async.AnimationDelay(playListener);
+  timer.start();
 };
+
+disk.stopSound =  function() {
+  var audio = document.getElementById('audioplay');
+  if (goog.isDefAndNotNull(audio)) {
+    goog.events.removeAll(goog.dom.getElement('audioplay'));
+    goog.events.removeAll(goog.dom.getElement('embSource'));
+    audio.pause();
+  }
+}
 
 /**
  * @constructor
@@ -210,15 +246,16 @@ disk.Animation = function() {
   this.playNextPartA = goog.bind(function() {
     if (this.numA > 0) {
       goog.events.unlisten(goog.dom.getElement('audioplay'), 'ended', this.playNextPartA, false, this);
-      goog.events.unlisten(goog.dom.getElement('embedplay'), 'ended', this.playNextPartA, false, this);
+      goog.events.unlisten(goog.dom.getElement('embSource'), 'ended', this.playNextPartA, false, this);
       goog.dom.classes.remove(goog.dom.getElement('textA'+this.numA), 'texthover');
     }
     if (this.numA < 31) {
       this.numA++;
       goog.dom.classes.add(goog.dom.getElement('textA'+this.numA), 'texthover');
+      disk.stopSound();
       disk.playSound('sideA/'+this.numA);
       goog.events.listen(goog.dom.getElement('audioplay'), 'ended', this.playNextPartA, false, this);
-      goog.events.listen(goog.dom.getElement('embedplay'), 'ended', this.playNextPartA, false, this);
+      goog.events.listen(goog.dom.getElement('embSource'), 'ended', this.playNextPartA, false, this);
     } else {
       goog.dom.classes.remove(goog.dom.getElement('play-buttonA'), 'playing');
     }
@@ -227,7 +264,7 @@ disk.Animation = function() {
   this.playNextPartB = goog.bind(function() {
     if (this.numB > 0) {
       goog.events.unlisten(goog.dom.getElement('audioplay'), 'ended', this.playNextPartB, false, this);
-      goog.events.unlisten(goog.dom.getElement('embedplay'), 'ended', this.playNextPartB, false, this);
+      goog.events.unlisten(goog.dom.getElement('embSource'), 'ended', this.playNextPartB, false, this);
       goog.dom.classes.remove(goog.dom.getElement('textB'+this.numB), 'texthover');
     }
     if (this.numB < 30) {
@@ -235,7 +272,7 @@ disk.Animation = function() {
       goog.dom.classes.add(goog.dom.getElement('textB'+this.numB), 'texthover');
       disk.playSound('sideB/'+this.numB);
       goog.events.listen(goog.dom.getElement('audioplay'), 'ended', this.playNextPartB, false, this);
-      goog.events.listen(goog.dom.getElement('embedplay'), 'ended', this.playNextPartB, false, this);
+      goog.events.listen(goog.dom.getElement('embSource'), 'ended', this.playNextPartB, false, this);
     } else {
       goog.dom.classes.remove(goog.dom.getElement('play-buttonB'), 'playing');
     }
@@ -255,7 +292,7 @@ disk.Animation.prototype.startB = function() {
 }
 
 disk.Animation.prototype.stopA = function() {
-  disk.playSound('no'); 
+  disk.stopSound(); 
   goog.dom.classes.remove(goog.dom.getElement('play-buttonA'), 'playing');
   if ((this.numA > 0) && (this.numA <= 31)) {
     goog.dom.classes.remove(goog.dom.getElement('textA'+this.numA), 'texthover');
@@ -263,7 +300,7 @@ disk.Animation.prototype.stopA = function() {
 }
 
 disk.Animation.prototype.stopB = function() {
-  disk.playSound('no'); 
+  disk.stopSound(); 
   goog.dom.classes.remove(goog.dom.getElement('play-buttonB'), 'playing');
   if ((this.numB > 0) && (this.numB <= 30)) {
     goog.dom.classes.remove(goog.dom.getElement('textB'+this.numB), 'texthover');
